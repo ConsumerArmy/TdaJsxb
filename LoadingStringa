@@ -154,7 +154,7 @@ local function HDLRKW_fake_script() -- LoginConfirm.LocalScript
 	
 	local function InCorrect()
 		correctframe.Visible = true
-		correctframe.Text = "Wrong Username/Password"
+		correctframe.Text = "Wrong Key"
 		wait(1)
 		correctframe.Text =""
 		correctframe.Visible = false
