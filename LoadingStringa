@@ -1,0 +1,180 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local LoginBH = Instance.new("ScreenGui")
+local LoginMain = Instance.new("ImageLabel")
+local tittle = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local LoginConfirm = Instance.new("TextButton")
+local LoginConfirm_Roundify_12px = Instance.new("ImageLabel")
+local Key = Instance.new("TextBox")
+local correctframe = Instance.new("TextLabel")
+local Back = Instance.new("ImageLabel")
+
+--Properties:
+
+LoginBH.Name = "LoginBH"
+LoginBH.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+LoginBH.DisplayOrder = 99999999
+
+LoginMain.Name = "LoginMain"
+LoginMain.Parent = LoginBH
+LoginMain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoginMain.BackgroundTransparency = 1.000
+LoginMain.Position = UDim2.new(0.37150377, 0, 0.322776794, 0)
+LoginMain.Size = UDim2.new(0.257125437, 0, 0.354446471, 0)
+LoginMain.ZIndex = 2
+LoginMain.Image = "rbxassetid://3570695787"
+LoginMain.ImageColor3 = Color3.fromRGB(121, 121, 121)
+LoginMain.ScaleType = Enum.ScaleType.Slice
+LoginMain.SliceCenter = Rect.new(100, 100, 100, 100)
+LoginMain.SliceScale = 0.120
+
+tittle.Name = "tittle"
+tittle.Parent = LoginMain
+tittle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tittle.BackgroundTransparency = 1.000
+tittle.Position = UDim2.new(0, 0, -6.77507401e-08, 0)
+tittle.Size = UDim2.new(0.999999881, 0, 0.211356491, 0)
+tittle.ZIndex = 3
+tittle.Font = Enum.Font.Nunito
+tittle.Text = "ConsumerHub"
+tittle.TextColor3 = Color3.fromRGB(0, 0, 0)
+tittle.TextScaled = true
+tittle.TextSize = 14.000
+tittle.TextWrapped = true
+
+Frame.Parent = LoginMain
+Frame.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(-0.00239038258, 0, 0.208997175, 0)
+Frame.Size = UDim2.new(1.00000012, 0, 0.0370370336, 0)
+Frame.ZIndex = 2
+
+LoginConfirm.Name = "LoginConfirm"
+LoginConfirm.Parent = LoginMain
+LoginConfirm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoginConfirm.BackgroundTransparency = 1.000
+LoginConfirm.BorderSizePixel = 0
+LoginConfirm.Position = UDim2.new(0.300783485, 0, 0.753779233, 0)
+LoginConfirm.Size = UDim2.new(0.393652737, 0, 0.218106985, 0)
+LoginConfirm.ZIndex = 4
+LoginConfirm.Font = Enum.Font.SourceSans
+LoginConfirm.Text = "Login"
+LoginConfirm.TextColor3 = Color3.fromRGB(209, 209, 209)
+LoginConfirm.TextScaled = true
+LoginConfirm.TextSize = 14.000
+LoginConfirm.TextWrapped = true
+
+LoginConfirm_Roundify_12px.Name = "LoginConfirm_Roundify_12px"
+LoginConfirm_Roundify_12px.Parent = LoginConfirm
+LoginConfirm_Roundify_12px.Active = true
+LoginConfirm_Roundify_12px.AnchorPoint = Vector2.new(0.5, 0.5)
+LoginConfirm_Roundify_12px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoginConfirm_Roundify_12px.BackgroundTransparency = 1.000
+LoginConfirm_Roundify_12px.Position = UDim2.new(0.5, 0, 0.5, 0)
+LoginConfirm_Roundify_12px.Selectable = true
+LoginConfirm_Roundify_12px.Size = UDim2.new(1, 0, 1, 0)
+LoginConfirm_Roundify_12px.ZIndex = 3
+LoginConfirm_Roundify_12px.Image = "rbxassetid://3570695787"
+LoginConfirm_Roundify_12px.ImageColor3 = Color3.fromRGB(59, 59, 59)
+LoginConfirm_Roundify_12px.ScaleType = Enum.ScaleType.Slice
+LoginConfirm_Roundify_12px.SliceCenter = Rect.new(100, 100, 100, 100)
+LoginConfirm_Roundify_12px.SliceScale = 0.120
+
+Key.Name = "Key"
+Key.Parent = LoginMain
+Key.BackgroundColor3 = Color3.fromRGB(111, 111, 111)
+Key.BorderColor3 = Color3.fromRGB(94, 94, 94)
+Key.BorderSizePixel = 4
+Key.Position = UDim2.new(0.113668352, 0, 0.310888022, 0)
+Key.Size = UDim2.new(0.7682302, 0, 0.384743065, 0)
+Key.ZIndex = 3
+Key.Font = Enum.Font.SourceSans
+Key.PlaceholderText = "Enter Key Here"
+Key.Text = ""
+Key.TextColor3 = Color3.fromRGB(0, 0, 0)
+Key.TextScaled = true
+Key.TextSize = 14.000
+Key.TextWrapped = true
+
+correctframe.Name = "correctframe"
+correctframe.Parent = LoginMain
+correctframe.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+correctframe.Size = UDim2.new(0.999999881, 0, 0.99999994, 0)
+correctframe.ZIndex = 7
+correctframe.Font = Enum.Font.Nunito
+correctframe.Text = "Nil"
+correctframe.TextColor3 = Color3.fromRGB(193, 193, 193)
+correctframe.TextScaled = true
+correctframe.TextSize = 14.000
+correctframe.TextWrapped = true
+correctframe.Visible = false
+
+Back.Name = "Back"
+Back.Parent = LoginBH
+Back.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Back.BackgroundTransparency = 1.000
+Back.Position = UDim2.new(0.364195585, 0, 0.311107755, 0)
+Back.Size = UDim2.new(0.271132797, 0, 0.377784461, 0)
+Back.Image = "rbxassetid://3570695787"
+Back.ImageColor3 = Color3.fromRGB(80, 80, 80)
+Back.ScaleType = Enum.ScaleType.Slice
+Back.SliceCenter = Rect.new(100, 100, 100, 100)
+Back.SliceScale = 0.120
+
+-- Scripts:
+
+local function HDLRKW_fake_script() -- LoginConfirm.LocalScript 
+	local script = Instance.new('LocalScript', LoginConfirm)
+
+	
+	
+	local confirm = script.Parent
+	local key = script.Parent.Parent.Key
+	local correctframe = script.Parent.Parent.correctframe
+	
+	local function Correct()
+		correctframe.Visible = true
+		correctframe.Text = "Connecting"
+			wait(0.8)
+		correctframe.Text = "Loading"
+			wait(0.3)
+		correctframe.Text = "Loading."
+			wait(0.3)
+		correctframe.Text = "Loading.."
+			wait(0.3)
+		correctframe.Text = "Loading..."
+			wait(0.3)
+		correctframe.Text = "Done!"
+	end
+	
+	
+	local function InCorrect()
+		correctframe.Visible = true
+		correctframe.Text = "Wrong Username/Password"
+		wait(1)
+		correctframe.Text =""
+		correctframe.Visible = false
+	end
+	
+	
+	confirm.MouseButton1Click:Connect(function()
+		if key.Text == "ha/kLr5.ds&HaTe_CA" then
+				Correct()
+				wait(2.3)
+			script.Parent.Parent.Parent.Parent.LoginBH.Enabled = false
+			wait(0.1)
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/ConsumerArmy/ConsumerHub/main/BungerHill'),true))()	
+		
+			
+		else
+			InCorrect()
+		
+		end
+		
+	end)
+end
+coroutine.wrap(HDLRKW_fake_script)()
